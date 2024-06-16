@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	"proxy-pattern-go/pkg/proxy"
 )
 
 func main() {
-	fmt.Println("Proxy Pattern Example")
+	realSubject := &proxy.RealSubject{}
+	fmt.Println(realSubject.Request())
 }
