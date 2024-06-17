@@ -7,5 +7,7 @@ import (
 
 func main() {
 	realSubject := &proxy.RealSubject{}
-	fmt.Println(realSubject.Request())
+	proxy := proxy.NewProxy(realSubject)
+
+	fmt.Println(proxy.Request())
 }
